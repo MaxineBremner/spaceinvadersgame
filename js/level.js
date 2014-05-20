@@ -9,8 +9,8 @@
           [0,0,0,0,0,0,0,0,0,0,0],
           [0,0,0,0,0,0,0,0,0,0,0],
           [0,0,0,0,0,0,0,0,0,0,0],
-          [0,0,0,0,0,2,2,0,0,0,0],
-          [0,0,0,0,0,1,1,0,0,0,0]],
+          [0,0,0,0,2,2,2,0,0,0,0],
+          [0,0,0,1,1,1,1,0,0,0,0]],
      2:  [[0,0,0,0,0,0,0,0,0,0,0],
           [0,0,0,0,0,0,0,0,0,0,0],
           [0,0,0,0,0,0,0,0,0,0,0],
@@ -33,12 +33,14 @@
           [0,0,3,3,3,3,3,3,3,,0],
           [0,0,0,0,0,2,2,0,0,0,0],
           [0,0,0,0,0,1,1,0,0,0,0]], 
+      
+      // this changes how many aliens per leve. 1 is the white aliens, 2 is the red. 
   
   
   };
 
   var spriteData = {
-    'alien1': { sx: 0,  sy: 0,  w: 53, h: 18, cls: Alien, frames: 2 },
+    'alien1': { sx: 0,  sy: 0,  w: 23, h: 18, cls: Alien, frames: 2 },
     'alien2': { sx: 0,  sy: 18, w: 23, h: 18, cls: Alien, frames: 2 },
     'player': { sx: 0,  sy: 36, w: 26, h: 17, cls: Player },
     'missile': { sx: 0,  sy: 86, w: 3,  h: 14, cls: Missile }
@@ -74,7 +76,8 @@
     GameAudio.load({ 'fire' : 'media/laser.ogg', 'die' : 'media/explosion.ogg' }, 
                    function() { 
                        Game.initialize("#gameboard", levelData, spriteData,
-                                      { "start": startGame,
+         
+                                       { "start": startGame,
                                         "die"  : endGame,
                                         "win"  : winGame });
                    });
