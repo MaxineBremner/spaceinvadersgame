@@ -77,7 +77,7 @@ Alien.prototype.step = function(dt) {
 }
 
 Alien.prototype.fireSometimes = function() {
-      if(Math.random()*100 < 2) { //amount of fires that the aliens fire//
+      if(Math.random()*100 < 3) { //amount of fires that the aliens fire//
         this.board.addSprite('missile',this.x + this.w/2 - Sprites.map.missile.w/2,
                                       this.y + this.h, 
                                      { dy: 100 });
