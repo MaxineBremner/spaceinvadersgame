@@ -21,7 +21,7 @@ var Game = new function() {
     Sprites.load(sprite_data,this.callbacks['start']);
   };
 
-  this.loadBoard = function(board) { Game.board = board; };
+  this.loadBoard = function(board) { Game.board = board;};
 
   this.loop = function() { 
     Game.board.step(30/1000); 
@@ -37,7 +37,7 @@ var Sprites = new function() {
     this.map = sprite_data;
     this.image = new Image();
     this.image.onload = callback;
-    this.image.src = 'images/sprites.png';
+    this.image.src = 'images/sprites.png'; //file for sprites//
   };
 
   this.draw = function(canvas,sprite,x,y,frame) {
@@ -66,7 +66,7 @@ var GameScreen = function GameScreen(text,text2,callback) {
 
 var GameBoard = function GameBoard(level_number) {
   this.removed_objs = [];
-  this.missiles = 0;
+  this.missiles = 3;
   this.level = level_number;
   var board = this;
 
