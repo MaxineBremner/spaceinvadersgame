@@ -44,7 +44,7 @@
     'alien1': { sx: 0,  sy: 0,  w: 23, h: 18, cls: Alien, frames: 2 },
     'alien2': { sx: 0,  sy: 18, w: 24, h: 15, cls: Alien, frames: 2 },
     'alien3': { sx: 0,  sy: 35, w: 35, h: 20, cls: Alien, frames: 2 },  
-    'player': { sx: 0,  sy: 50, w: 45, h: 36, cls: Player },
+    'player': { sx: 0,  sy: 50, w: 45, h: 36, cls: Player, frames: 3 },
     'missile': { sx: 0, sy: 86, w: 3,  h: 14, cls: Missile }
    /* 'sheild': { sx: 0,  sy: 53, w: 45, h: 32, cls: Shield }, */
 
