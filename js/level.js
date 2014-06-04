@@ -41,7 +41,7 @@
 
 /* sprite data of sprite sheet */ 
   var spriteData = {
-    'alien1': { sx: 0,  sy: 0,  w: 23, h: 18, cls: Alien, frames: 3 }, // Pixel co ordinates for the sprite sheet.
+    'alien1': { sx: 0,  sy: 0,  w: 38, h: 22, cls: Alien, frames: 3 }, // Pixel co ordinates for the sprite sheet.
     'alien2': { sx: 0,  sy: 18, w: 48, h: 15, cls: Alien, frames: 3 }, 
     'alien3': { sx: 0,  sy: 33, w: 33, h: 20, cls: Alien, frames: 2 },  
     'player': { sx: 0,  sy: 50, w: 45, h: 36, cls: Player, frames: 3 },
