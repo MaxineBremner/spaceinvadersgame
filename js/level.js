@@ -26,13 +26,13 @@
           [0,0,0,0,0,0,0,0,0,0,0],
           [0,2,2,2,0,0,0,2,2,2,0],
           [0,0,0,0,0,0,0,0,0,0,0],
+          [0,0,0,0,0,0,0,0,0,0,0],
+          [0,0,1,1,1,1,1,1,0,0,0],
           [0,0,1,1,1,1,1,1,0,0,0],
           [0,0,0,0,0,0,0,0,0,0,0],
           [0,0,0,0,0,0,0,0,0,0,0],
           [0,0,0,0,0,0,0,0,0,0,0],
-          [0,0,0,0,0,0,0,0,0,0,0],
-          [0,0,0,0,0,0,0,0,0,0,0],
-          [0,0,0,0,0,0,0,0,0,0,0]], 
+          [0,0,0,0,0,0,0,0,0,0,0]],
      
       // this changes how many aliens per leve. 1 is the blue ufo, 2 is the orange, 3 is the bigger white one. 
   
@@ -43,7 +43,7 @@
   var spriteData = {
     'alien1': { sx: 0,  sy: 0,  w: 38, h: 22, cls: Alien, frames: 3 }, // Pixel co ordinates for the sprite sheet.
     'alien2': { sx: 0,  sy: 22, w: 38, h: 22, cls: Alien, frames: 3 }, 
-    'alien3': { sx: 0,  sy: 33, w: 33, h: 20, cls: Alien, frames: 2 },  
+    'alien3': { sx: 2,  sy: 48, w: 62, h: 35, cls: Alien, frames: 3 },  
     'player': { sx: 0,  sy: 84, w: 42, h: 53, cls: Player, frames: 3 },
     'missile': { sx: 0, sy: 143, w: 3,  h: 14, cls: Missile }
    /* 'sheild': { sx: 0,  sy: 53, w: 45, h: 32, cls: Shield }, */
