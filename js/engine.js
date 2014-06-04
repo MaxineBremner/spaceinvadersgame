@@ -1,5 +1,5 @@
 var Game = new function() {                                                                  
-  var KEY_CODES = { 37:'left', 39:'right', 32 :'fire' };
+  var KEY_CODES = { 37:'left', 39:'right', 38:'up', 40:'down', 32 :'fire' };
   this.keys = {};
 
   this.initialize = function(canvas_dom,level_data,sprite_data,callbacks) {
@@ -21,12 +21,12 @@ var Game = new function() {
     Sprites.load(sprite_data,this.callbacks['start']);
   };
 
-  this.loadBoard = function(board) { Game.board = board;};
+  this.loadBoard = function(board) { Game.board = board; };
 
   this.loop = function() { 
     Game.board.step(30/1000); 
     Game.board.render(Game.canvas);
-    setTimeout(Game.loop,9); //Speed of game//
+    setTimeout(Game.loop,10);
   };
 };
 
@@ -37,7 +37,7 @@ var Sprites = new function() {
     this.map = sprite_data;
     this.image = new Image();
     this.image.onload = callback;
-    this.image.src = 'images/sprites.png'; //file for sprites//
+    this.image.src = 'images/spritenew.png';
   };
 
   this.draw = function(canvas,sprite,x,y,frame) {
@@ -61,12 +61,14 @@ var GameScreen = function GameScreen(text,text2,callback) {
     canvas.font = "bold 20px arial";
     var measure2 = canvas.measureText(text2);
     canvas.fillText(text2,Game.width/2 - measure2.width/2,Game.height/2 + 40);
+
   };
 };
 
 var GameBoard = function GameBoard(level_number) {
+  this.score = 0;
   this.removed_objs = [];
-  this.missiles = 3;
+  this.missiles = 0;
   this.level = level_number;
   var board = this;
 
@@ -111,6 +113,10 @@ var GameBoard = function GameBoard(level_number) {
   this.render = function(canvas) {
     canvas.clearRect(0,0,Game.width,Game.height);
     this.iterate(function() { this.draw(canvas); });
+
+    var scoretext = "Score: " + this.score;
+    canvas.font="20px Georgia";
+    canvas.fillText(scoretext,10,50);
   };
 
   this.collision = function(o1,o2) {
@@ -126,6 +132,7 @@ var GameBoard = function GameBoard(level_number) {
   };
 
   this.loadLevel = function(level) {
+      
     this.objects = [];
     this.player = this.addSprite('player', // Sprite
                                  Game.width/2, // X
