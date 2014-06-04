@@ -6,7 +6,7 @@
           [0,0,1,1,1,0,1,1,1,0,0],
           [0,0,1,1,1,0,1,1,1,0,0],
           [0,0,0,0,0,0,0,0,0,0,0],
-          [0,0,1,3,3,3,3,0,0,0,0],
+          [0,0,0,0,0,0,0,0,0,0,0],
           [0,0,0,0,0,0,0,0,0,0,0],
           [0,0,0,0,0,0,0,0,0,0,0],
           [0,0,0,0,0,0,0,0,0,0,0],
@@ -42,10 +42,10 @@
 /* sprite data of sprite sheet */ 
   var spriteData = {
     'alien1': { sx: 0,  sy: 0,  w: 38, h: 22, cls: Alien, frames: 3 }, // Pixel co ordinates for the sprite sheet.
-    'alien2': { sx: 0,  sy: 18, w: 48, h: 15, cls: Alien, frames: 3 }, 
+    'alien2': { sx: 0,  sy: 22, w: 38, h: 22, cls: Alien, frames: 3 }, 
     'alien3': { sx: 0,  sy: 33, w: 33, h: 20, cls: Alien, frames: 2 },  
-    'player': { sx: 0,  sy: 50, w: 45, h: 36, cls: Player, frames: 3 },
-    'missile': { sx: 0, sy: 86, w: 3,  h: 14, cls: Missile }
+    'player': { sx: 0,  sy: 84, w: 42, h: 53, cls: Player, frames: 3 },
+    'missile': { sx: 0, sy: 143, w: 5,  h: 14, cls: Missile }
    /* 'sheild': { sx: 0,  sy: 53, w: 45, h: 32, cls: Shield }, */
 
   }
