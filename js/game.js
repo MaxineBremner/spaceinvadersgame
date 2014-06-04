@@ -76,8 +76,9 @@ Alien.prototype.step = function(dt) {
   return true;
 }
 
+// changed the amount that the ufo's fire also calls on the sprite sheet for the missile sprite  
 Alien.prototype.fireSometimes = function() {
-      if(Math.random()*100 < 6) { //amount of fires that the aliens fire//
+      if(Math.random()*100 < 6) { 
         this.board.addSprite('missile',this.x + this.w/2 - Sprites.map.missile.w/2,
                                       this.y + this.h, 
                                      { dy: 100 });
